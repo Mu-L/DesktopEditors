@@ -1,5 +1,44 @@
 # Change log
 
+## 9.4.0
+
+### New features
+
+#### All Editors
+
+* Added Croatian language interface translation (hr-HR, Hrvatska)
+* Moved chart settings from the right panel to a separate **Chart design** tab
+* Added options for pasting from the clipboard for the Paste button on the top toolbar
+
+#### Document Editor
+
+* Implemented the ability to add a horizontal line
+
+#### Spreadsheet Editor
+
+* Added the Dark mode support for the sheet
+
+#### Presentation Editor
+
+* Added 25 new presentation design themes
+* Added 20 new slide transitions, grouped by category
+
+#### Forms
+
+* The app saves the most recently added image in the Signature field so it can be
+  automatically used when filling out the form again
+* Added the "Send for signing" and "Filling status" panels
+
+#### Security
+
+* Fixed out-of-bounds read vulnerabilities when converting XLS to XLSX in the following
+  functions: `ChartSheetSubstream::recalc`, `TextPropsStream::readFields`,
+  `MetroBlob::ReadComplexData`, `SUPBOOK::serialize_book` and `ATTACHEDLABEL::serialize_rPr`
+* Fixed a vulnerability in GUID generation that allowed an attacker to calculate
+  GUIDs based on their creation time
+* Fixed a vulnerability that allowed bypassing macro sandbox restrictions and accessing
+  environment objects via sloppy-mode `this` and `eval`
+
 ## 9.3.1
 
 ### Fixes
@@ -15,6 +54,8 @@
 #### All Editors
 
 * Added the Use AI functions option to the application settings
+* Added the `Auto` option (by default) for the `Page orientation` list in
+  the print preview menu
 * Added Box and Dropbox cloud providers
 * Added the Pin option to the Recent files and Recent folders lists on
   the start page
